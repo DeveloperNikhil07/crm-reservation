@@ -1,0 +1,1006 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+@import url('./crm-variables.css');
+@import url('./crm-header.css');
+@import url('./crm-footer.css');
+@import url('https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css');
+
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 100%;
+}
+
+.failed-bg {
+    background-color: var(--failed-color);
+}
+
+.failed {
+    color: var(--failed-color)
+}
+
+.break {
+    background-color: red;
+    color: var(--white-color)
+}
+
+.bg-gray {
+    background-color: var(--bg-gray);
+}
+
+.loss {
+    color: var(--failed-color);
+}
+
+.profit {
+    color: var(--green-color);
+}
+
+.total-profit {
+    color: var(--green-color);
+}
+
+.total-profit-bg {
+    background-color: var(--green-color);
+}
+
+.total-user {
+    color: #4CAFEB;
+}
+
+.total-user-bg {
+    background-color: #4CAFEB;
+}
+
+.confirm-booking {
+    color: #9C27B0;
+}
+
+.confirm-booking-bg {
+    background-color: #9C27B0;
+}
+
+.total-ticketed {
+    color: #FF9800;
+}
+
+.total-ticketed-bg {
+    background-color: #FF9800;
+}
+
+.incomplete-ticket {
+    color: #FFC400;
+}
+
+.incomplete-ticket-bg {
+    background-color: #FFC400;
+}
+
+.affiliate-bg {
+    background-color: #42A5F5;
+}
+
+/* status color*/
+.online {
+    color: var(--green-color);
+}
+
+.ofline {
+    color: var(--light-gray-color)
+}
+
+.sleep-mode {
+    color: #FFC400;
+}
+
+.section-title h2,
+.section-title h1 {
+    font-size: clamp(24px, 2.5vw, 28px);
+    font-weight: 700;
+    line-height: normal;
+    color: var(--black-color);
+    position: relative;
+}
+
+.xl-line::after,
+.xl-line::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2px;
+    width: 50px;
+    border-radius: 5px;
+    background-color: var(--secondary-primary);
+    transition: all 0.3s ease;
+}
+
+.xl-line::before {
+    right: 20px;
+    left: auto;
+}
+
+.cm-button {
+    width: 100%;
+    background-color: var(--theme-color);
+    border: none;
+    color: var(--white-color);
+    font-weight: 500;
+    padding: 8px 20px;
+    font-size: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 25px;
+    display: inline-block;
+    text-align: center;
+}
+
+body .cm-button:hover,
+.cm-button:focus,
+.cm-button:active {
+    background-color: var(--black-color) !important;
+    color: var(--white-color) !important
+}
+
+.pt {
+    padding-top: 40px;
+}
+
+.pb {
+    padding-bottom: 40px;
+}
+
+.py {
+    padding: 40px 0px;
+}
+
+.mt {
+    margin-top: 40px;
+}
+
+.mb {
+    margin-bottom: 40px;
+}
+
+.my {
+    margin: 40px 0px;
+}
+
+
+/* Login Page css */
+.login-form-wrapper {
+    width: 100%;
+    overflow-y: auto;
+    background: url('../images/flight-banner2.jpg');
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+    background-position: right;
+}
+
+.login-form-wrapper::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    width: 100%;
+}
+
+.login-wrapper {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: var(--white-color);
+}
+
+.login-btn {
+    width: 100%;
+}
+
+.form-label {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 2px;
+    color: var(--black-color)
+}
+
+.input-fields {
+    position: relative;
+}
+
+.form-control {
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 8px 12px;
+    appearance: auto;
+    -moz-appearance: auto;
+    min-height: 40px;
+    max-height: 40px;
+}
+
+.form-fields textarea {
+    min-height: 100px;
+    max-height: 100px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: var(--theme-color);
+}
+
+.login-card>a {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px
+}
+
+.login-card>a img {
+    width: 160px;
+    height: auto
+}
+
+.login-card h2 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: var(--secondary-primary)
+}
+
+.form-wrapper .input-fields i {
+    position: absolute;
+    right: 12px;
+    top: 70%;
+    transform: translateY(-50%);
+    color: var(--theme-color)
+}
+
+.landingpage-banner {
+    background: url('../images/banner-image.webp');
+    min-height: 300px;
+    max-height: 300px;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+
+.landingpage-banner::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.banner-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* Agent Activity Css */
+.agent-activity-wrap {
+    background-color: var(--bg-gray);
+    position: relative;
+}
+.agent-tabs{
+    position: absolute;
+    top: 20px;
+    left: 150px;
+    z-index: 1;
+}
+.agent-tabs .agent-tabs-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* 03-12-24 */
+.user-login-data-wrap .dt-container>.dt-layout-row .dt-length>label {
+    display: none;
+}
+
+.user-login-data-wrap .dt-container>.dt-layout-row .dt-length>select {
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: inline-block;
+    color: var(--black-color);
+    transition: var(--transition);
+    font-size: 14px;
+    background-color: var(--white-color);
+    min-width: 120px;
+    border: none;
+    font-weight: 500;
+}
+
+.user-login-data-wrap .dt-container>.dt-layout-row {
+    margin-top: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    align-items: end !important;
+}
+
+.user-login-data-wrap .dt-container>.dt-layout-row .dt-search>label {
+    font-weight: 500;
+    font-size: 15px;
+    text-align: left;
+}
+
+.user-login-data-wrap .dt-container>.dt-layout-row .dt-search {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-login-data-wrap .dt-container>.dt-layout-row .dt-search input:focus {
+    border-color: var(--theme-color);
+}
+
+.user-login-data-wrap .dt-container>.dt-layout-row .dt-length>select.dt-input:hover {
+    background: var(--theme-color);
+    color: var(--white-color);
+}
+
+.user-login-data-wrap .dt-layout-cell>div {
+    font-weight: 500;
+    font-size: 16px
+}
+
+.user-login-data-wrap .dt-layout-cell .dt-paging>nav>button.current {
+    background: var(--theme-color);
+    color: var(--white-color) !important;
+    border-color: var(--white-color);
+    font-weight: 500;
+}
+
+.user-login-data-wrap .dt-layout-cell .dt-paging>nav>button:hover,
+.user-login-data-wrap .dt-layout-cell .dt-paging>nav>button.current:hover {
+    background: var(--theme-color);
+    border-color: var(--white-color);
+    color: var(--white-color) !important
+}
+
+.user-login-data-wrap .dt-container>.dt-layout-row .dt-length>select.dt-input:hover option {
+    background: #fff;
+    color: #000
+}
+
+/* end */
+
+.agent-tabs .agent-tabs-list>li>.row-dropdown {
+    position: relative;
+    z-index: 1;
+}
+
+.agent-tabs .agent-tabs-list>li>.row-dropdown>.dropdown-list {
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    background-color: var(--white-color);
+    width: 100%;
+    padding-top: 15px;
+    box-shadow: 3px 3px 12px var(--bg-gray);
+    display: none;
+}
+
+.agent-tabs .agent-tabs-list>li>.row-dropdown:hover>.dropdown-list {
+    display: block;
+}
+
+.agent-tabs .agent-tabs-list>li>.row-dropdown>.dropdown-list ul {
+    position: relative;
+}
+
+.agent-tabs .agent-tabs-list>li>.row-dropdown>.dropdown-list ul::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: -9px;
+    height: 20px;
+    width: 20px;
+    background-color: var(--white-color);
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+
+.agent-tabs .agent-tabs-list>li>button,
+.agent-tabs .agent-tabs-list>li>a,
+.agent-tabs .agent-tabs-list>li>.row-dropdown>button,
+.agent-tabs .agent-tabs-list>li>.row-dropdown>a {
+    padding: 9.5px 15px;
+    border-radius: 8px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    color: var(--black-color);
+    transition: var(--transition);
+    font-size: 14px;
+    background-color: var(--white-color);
+    font-weight: 500;
+}
+
+.agent-tabs .agent-tabs-list>li>button:hover,
+.agent-tabs .agent-tabs-list>li>a:hover,
+.agent-tabs .agent-tabs-list>li>.row-dropdown>button:hover,
+.agent-tabs .agent-tabs-list>li>.row-dropdown>a:hover {
+    background-color: var(--theme-color);
+    color: var(--white-color)
+}
+
+.searchbar-field {
+    position: relative;
+}
+
+.searchbar-field input {
+    padding: 5px 15px;
+    border-radius: 8px;
+    border: 1px solid var(--theme-color);
+    color: var(--secondary-primary);
+    width: calc(100% - 30%);
+}
+
+.searchbar-field i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--theme-color);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.agent-tabs .dropdown-list>ul>li {
+    width: 100%;
+}
+
+.dropdown-list>ul li button {
+    background-color: transparent;
+    padding: 6px 15px;
+    transition: var(--transition);
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+    color: var(--secondary-primary)
+}
+
+.dropdown-list>ul li:hover button {
+    background-color: var(--theme-color);
+    color: var(--white-color)
+}
+
+/* Table css */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    white-space: nowrap;
+}
+
+th,
+td,
+tfoot {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    width: 33.33%;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+th,
+tfoot {
+    background-color: var(--white-color);
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--black-color);
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: var(--white-color);
+}
+
+.user-login-data-wrap .user-head .angle-icon i {
+    font-size: 14px;
+    line-height: normal;
+    color: var(--theme-color);
+    vertical-align: middle;
+}
+
+.pagination .pagination-list li {
+    border: 1px solid var(--theme-color);
+    line-height: 35px;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.pagination .pagination-list li.active {
+    background-color: var(--theme-color);
+    color: var(--white-color)
+}
+
+/* Manage Vacation css */
+.form-wrapper label {
+    margin-bottom: 5px
+}
+
+.manage-vacation-wrapp .form-wrapper {
+    background: var(--white-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 5px 4px 7px #f0f0f0;
+}
+
+.vacation-table table tbody tr td,
+.vacation-table table thead tr th {
+    width: auto;
+    font-size: 14px
+}
+
+/* Dashboard page css */
+.dashboard-card {
+    padding: 15px;
+    border-color: var(--theme-color);
+    transition: var(--transition);
+    border-radius: 8px;
+    background-color: var(--white-color);
+    box-shadow: 3px 3px 10px #ccc;
+    height: 100%;
+    border: 1px solid transparent;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-10px);
+    border-left: 1px solid var(--theme-color);
+}
+
+.dashboard-card .card-body h2 {
+    font-size: clamp(18px, 1.8vw, 24px);
+    font-weight: 600;
+    line-height: normal;
+    padding-top: 20px;
+    text-align: center;
+    color: var(--black-color)
+}
+
+.dashboard-card .card-body {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.dashboard-card .card-body p {
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.dashboard-card .card-body .card-content>p {
+    color: var(--secondary-primary)
+}
+
+.dashboard-card .icon {
+    height: 60px;
+    width: 60px;
+    border-radius: 100px;
+    /* background-color: var(--green-color); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.dashboard-card .icon i {
+    color: var(--white-color);
+    font-size: 24px;
+}
+
+.dashboard-card-row .slick-list .slick-track>.slick-slide {
+    padding: 0px 5px;
+}
+
+.dashboard-card-row .slick-list .slick-track>.slick-slide>div,
+.dashboard-card-row .slick-list .slick-track>.slick-slide>div>div {
+    height: 100%;
+}
+
+.dashboard-card-row .slick-list,
+.dashboard-card-row .slick-list .slick-track {
+    height: 100%;
+    display: flex;
+    padding: 5px;
+}
+
+.dashboard-card-row .slick-list .slick-track {
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.dashboard-card-row .slick-list {
+    padding: 0;
+}
+
+.dashboard-card-row button.slick-prev:before,
+.dashboard-card-row button.slick-next::before {
+    content: "\f060";
+    font-family: "fontawesome";
+    font-size: 18px;
+    color: var(--white-color);
+    background-color: var(--theme-color);
+}
+
+.dashboard-card-row button.slick-next::before {
+    content: '\f061';
+}
+
+.dashboard-card-row button.slick-next {
+    right: 0;
+}
+
+.dashboard-card-row button.slick-prev {
+    left: 0;
+}
+
+.dashboard-card-row button {
+    height: 35px;
+    width: 35px;
+    border-radius: 50px;
+    background-color: var(--theme-color);
+    z-index: 111;
+}
+
+.dashboard-card-row button:hover.slick-prev::before,
+.dashboard-card-row button:hover.slick-next::before,
+.dashboard-card-row button:focus.slick-prev::before,
+.dashboard-card-row button:focus.slick-next::before {
+    height: 35px;
+    width: 35px;
+    border-radius: 50px;
+    background-color: var(--theme-color);
+    opacity: 1;
+    display: block;
+    line-height: 33px;
+}
+
+/* Chart Graph css */
+.chart-wrapper {
+    width: 100%;
+}
+
+.chart-graph-box {
+    width: 100%;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: var(--white-color);
+    box-shadow: 3px 3px 10px var(--gray-color);
+    height: 100%;
+}
+
+.recived-amount {
+    padding-right: 30px;
+}
+
+.due-amount {
+    padding-left: 30px;
+    border-left: 1px solid var(--gray-color);
+}
+
+.due-amount p,
+.recived-amount p {
+    font-size: clamp(14px, 1.2vw, 16px);
+    font-weight: 500;
+    color: var(--secondary-primary);
+    padding-bottom: 5px;
+}
+
+.filter-box .dropdown>button {
+    font-size: 14px;
+    padding: 4px 10px;
+    font-weight: 400;
+}
+
+.filter-box p {
+    font-size: 14px;
+    color: var(--secondary-color);
+    font-weight: 500
+}
+
+.option-dropdown .options {
+    background: var(--gray-color);
+    padding: 4px 4px;
+    border-radius: 4px;
+    font-weight: 500;
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    font-size: 14px;
+}
+
+.option-dropdown .options li {
+    cursor: pointer;
+}
+
+.option-dropdown {
+    position: relative;
+}
+
+.option-dropdown:hover .options {
+    display: block;
+}
+
+.option-dropdown button {
+    padding: 4px 10px;
+    font-size: 14px;
+}
+
+.donout-item {
+    max-width: 100%;
+}
+
+.donout-item canvas {
+    max-width: 50%;
+    width: 50% !important;
+    margin: 0 auto;
+    height: auto !important;
+}
+
+.visitors-content {
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    transform: translate(-50%, -50%)
+}
+
+.visitors-content h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: inherit;
+}
+
+.chart-header h3 {
+    font-size: clamp(17px, 1.5vw, 20px);
+}
+
+.user-login-row .user-profile>i {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    background-color: var(--theme-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+    margin-right: 10px;
+}
+
+.user-login-row .user-profile>i.online:after,
+.user-login-row .user-profile>i.ofline:after,
+.user-login-row .user-profile>i.sleep-mode:after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    bottom: 2px;
+    height: 12px;
+    width: 12px;
+    border-radius: 30px;
+    background-color: var(--green-color);
+    outline: 1.5px solid var(--white-color);
+}
+
+.user-login-row .user-profile>i.ofline:after {
+    background-color: var(--light-gray-color);
+}
+
+.user-login-row .user-profile>i.sleep-mode:after {
+    background-color: #FFC400;
+}
+
+.user-name h5 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.user-name p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #555;
+}
+
+.user-login-row {
+    margin-bottom: 10px;
+}
+
+.user-login-row {
+    padding: 10px;
+    border: 1px solid var(--bg-gray);
+    border-radius: 8px;
+    box-shadow: 3px 3px 8px #f0f0f0
+}
+
+.user-status {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Reports css */
+.flight-booking-wrapper .form-wrapper .report-button-row button,
+.leadbooking-flight .form-wrapper button[type="submit"] {
+    width: auto;
+}
+
+.flight-list-header ul li {
+    font-size: clamp(17px, 1.2vw, 18px);
+    font-weight: 500;
+    color: var(--secondary-color);
+    line-height: normal;
+    width: 25%;
+}
+
+.flight-list-header ul {
+    border-bottom: 2px dashed var(--gray-color);
+    padding-bottom: 25px;
+}
+
+.flight-list-header ul li>i {
+    font-size: 16px;
+    vertical-align: baseline;
+    color: var(--theme-color);
+}
+
+.flight-listing-data ul {
+    margin-top: 25px;
+    gap: 20px;
+}
+
+.flight-listing-data ul li {
+    width: 25%;
+    font-size: clamp(17px, 1.2vw, 18px);
+    font-weight: 500;
+    color: var(--secondary-color);
+    line-height: normal;
+}
+
+.flight-listing-data ul li .client-profile {
+    min-height: 45px;
+    min-width: 45px;
+    border-radius: 100px;
+    background: var(--theme-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px
+}
+
+.flight-listing-data ul li .client-profile i {
+    color: var(--white-color)
+}
+
+.flight-listing-data ul li .client-info h5 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.flight-listing-data ul li .client-info p {
+    font-size: 14px;
+    font-weight: 400;
+    padding-top: 2px;
+}
+
+.flight-listing-data ul li>.member {
+    height: 45px;
+    width: 45px;
+    border-radius: 100px;
+    background: var(--theme-color);
+    color: var(--white-color);
+    line-height: 45px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.form-fields .react-datepicker-wrapper {
+    width: 100%;
+}
+
+.booking-report-table table thead th,
+.booking-report-table table tbody tr td {
+    width: 6.25%;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.user-login-data-wrap table thead th {
+    text-transform: capitalize;
+    border-right-color: var(--theme-color);
+    border-left-color: var(--theme-color);
+    border-left-width: 2px;
+    border-right-width: 2px;
+}
+
+.lead-flight-booking-table table thead th {
+    width: 7.14%;
+    /* white-space:nowrap; */
+}
+
+.customer-feedback-table table thead tr th {
+    width: 14.28%;
+}
+
+.product-review-table table thead tr th {
+    width: 12.5%;
+}
+
+.common-report-table table thead tr th {
+    width: 15%;
+}
+
+.common-report-table table thead tr th:nth-child(2) {
+    width: 55%;
+}
+
+.flight-report-table table thead tr th,
+.flight-report-table table tbody tr td {
+    width: 25%;
+    font-size: 14px;
+}

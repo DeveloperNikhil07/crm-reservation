@@ -1,0 +1,13 @@
+.footer-wrapper{
+    background-color:var(--white-color);
+    padding: 15px;
+    border-top:1px solid #ec742952;
+}
+.footer-logo img{
+    width: auto;
+    height: auto;
+    padding: 0 10px;
+}
+.footer-content p{
+    font-size: 16px;
+}

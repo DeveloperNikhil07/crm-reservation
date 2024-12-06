@@ -1,0 +1,229 @@
+@media screen and (max-width:1399px) {
+    .user-login-data-wrap {
+        overflow: auto;
+    }
+}
+
+@media screen and (max-width:1199px) {
+
+
+    .user-login-data-wrap.booking-report-table table {
+        min-width: 1200px;
+        max-width: 1200px;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .header-bottom .offcanvas-menu-body .offcanvas-menu-item>ul>li {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .header .offcanvas-menu-body button.toggle-btn {
+        display: block;
+    }
+
+    .header-bottom .offcanvas-menu-body .offcanvas-menu-item ul li a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
+    }
+
+    .offcanvas-header a img {
+        width: 160px;
+        height: auto;
+    }
+
+    .header .offcanvas-menu-body .admin-text {
+        padding-right: 0;
+    }
+
+    .header .offcanvas-menu-body .offcanvas-header {
+        display: flex !important;
+    }
+
+    .searchbar-field input {
+        width: 100%;
+    }
+
+    .header-bottom .offcanvas-item-body {
+        position: absolute;
+        width: 40%;
+        background: #000;
+        top: 0px;
+        left: -100%;
+        z-index: 999;
+        height: 100vh;
+        transition: var(--transition);
+    }
+
+    .header-bottom.show .offcanvas-item-body {
+        left: 0;
+    }
+
+    .header-bottom .offcanvas-menu-body .offcanvas-menu-item ul {
+        flex-direction: column;
+        align-items: unset;
+        padding-top: 30px;
+    }
+
+    .header-bottom.show .offcanvas-item-body .offcanvas-menu-item ul {
+        flex-direction: column;
+        align-items: unset;
+        /* display: block; */
+    }
+
+    .header-bottom .offcanvas-menu-body .offcanvas-menu-item ul li.active a,
+    .header-bottom .offcanvas-menu-body .offcanvas-menu-item ul li a {
+        width: 100%;
+        border-top: 1px solid #222;
+    }
+
+    .header-bottom .offcanvas-menu-body .offcanvas-menu-item.menu-items ul li:hover>.submenu-items>ul {
+        position: static;
+        padding: 0px;
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .bar-graph-item canvas {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .chart-graph-box {
+        padding: 15px;
+    }
+
+}
+
+@media screen and (max-width:767px) {
+    .agent-tabs{
+        top: 27px;
+    }
+    .user-login-data-wrap .dt-container>.dt-layout-row {
+        display: flex !important;
+        align-items: end !important;
+    }
+
+    .recived-amount {
+        padding-right: 10px;
+    }
+
+    .due-amount {
+        padding-left: 10px;
+    }
+
+    .donout-item canvas {
+        max-width: 70% !important;
+        width: 70% !important;
+    }
+
+    .header-bottom .offcanvas-item-body {
+        width: 60%;
+    }
+
+    .agent-tabs .agent-tabs-list {
+        gap: 10px;
+        justify-content: space-between;
+        margin-bottom: 0px;
+    }
+
+    th,
+    tfoot {
+        font-size: 14px;
+    }
+
+    td {
+        font-size: 14px;
+    }
+
+    .agent-tabs .agent-tabs-list .dropdown-list>ul>li {
+        width: 100%;
+    }
+
+    .recent-flight-wrapper {
+        overflow: auto;
+        padding-bottom: 15px;
+    }
+
+    .flight-listing-card {
+        min-width: 780px;
+        max-width: 780px;
+    }
+
+    .visitors-content {
+        top: 50%;
+    }
+
+    .flight-booking-wrapper .form-wrapper .report-button-row button,
+    .leadbooking-flight .form-wrapper button {
+        width: 100%;
+    }
+
+    .user-login-data-wrap.booking-report-table table {
+        min-width: 600px;
+        max-width: 600px;
+    }
+    .agent-tabs{
+        position: static;
+    }
+}
+
+@media screen and (max-width:539px) {
+    .user-login-data-wrap .dt-container>.dt-layout-row {
+        flex-wrap: wrap !important;
+        justify-content: center;
+    }
+
+    .user-login-data-wrap .dt-container>.dt-layout-row>div {
+        width: 100%;
+    }
+
+
+    .header-bottom .offcanvas-item-body {
+        width: 80%;
+    }
+
+    .donout-item canvas {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .agent-tabs .agent-tabs-list>li>button,
+    .agent-tabs .agent-tabs-list>li>a,
+    .agent-tabs .agent-tabs-list>li>.row-dropdown>button,
+    .agent-tabs .agent-tabs-list>li>.row-dropdown>a {
+        padding: 9px 11px;
+    }
+}
+
+@media screen and (max-width:479px) {
+    .header .header-logo a img {
+        width: 120px;
+    }
+
+    .offcanvas-menu-body .admin-text p {
+        font-size: 14px;
+    }
+
+    .offcanvas-menu-body .admin-text p>span.badge .badge-num {
+        height: 13px;
+        width: 13px;
+        padding: 1px;
+        font-size: 7px;
+    }
+
+    .xl-line::after {
+        left: 0;
+        width: 35px;
+    }
+
+    .xl-line::before {
+        right: 0;
+        width: 35px;
+    }
+}

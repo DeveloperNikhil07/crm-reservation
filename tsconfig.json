@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx"
+, "src/app/components/ShowTotalEnteryNumber/ShowTotalEnteryNum.js", "src/app/reports/flight-report-history/page.js", "src/app/reports/affiliate-click/page.js", "src/app/reports/card-auth-report/page.js", "src/app/reports/common-report/page.js", "src/app/reports/deeplink/page.js", "src/app/review/product-review/page.js", "src/app/review/customer-feedback/page.js", "src/app/lead/manage-lead/page.js", "src/app/lead/lead-booking-flight/page.js", "src/app/lead/add-lead-and-booking/page.js", "src/app/components/TableDataSearchBar/TableDataSearchBar.js", "src/app/components/TableDataRowDropdown/TableDataRowController.js", "src/app/components/searchToDate/SearchToDate.js", "src/app/components/searchFromDate/SearchFromDate.js", "src/app/components/PdfDownloadBtn/PdfDownloadBtn.js", "src/app/components/ExcelDownloadBtn/ExcelDownloadBtn.js"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
