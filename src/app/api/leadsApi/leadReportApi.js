@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 // Base URL for the API
-// const ApiBaseUrl = "http://192.168.0.151:818/api/Reports";
 const ApiBaseUrl = "https://reqres.in/api";
 
 // Make sure to pass the appropriate data when calling this API

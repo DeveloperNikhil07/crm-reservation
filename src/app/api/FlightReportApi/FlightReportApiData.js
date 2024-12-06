@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // Base URL for the API
-const ApiBaseUrl = "http://192.168.0.151:818/api/Reports";
+const ApiBaseUrl = "http://api/Reports";
 
 // Function to fetch data from the API
 export const FlightReportApi = async (dataAct) => {
